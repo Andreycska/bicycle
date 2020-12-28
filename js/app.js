@@ -60,4 +60,17 @@ $(function(){
         }, 700); // едим с какой скоростью
     });
 
+    // SLIDER: https://kenwheeler.github.io/slick/
+
+    $('.slider__iner').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        autoplaySpeed: 3000,
+        fade: true,
+        arrows: false,
+        dots: true
+    });
+
 });
