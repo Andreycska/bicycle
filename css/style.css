@@ -45,6 +45,14 @@ p {
     padding: 0 1rem;
 }
 
+/* HELPER CLASS */
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 /* HEADER */
 
 .header {
@@ -506,6 +514,87 @@ li.slick-active button {
     border: 1px solid rgba(255,255,255,0.5);
     background: transparent;
     cursor: pointer;
+    transition: color .2s linear, border .2s linear;
+}
+
+.shop__btn:hover, 
+.shop__btn:focus {
+    color: #64c29e;
+    border-color: #64c29e;
+}
+
+/* SUBSCRIBLE */
+
+.subscrible {
+    padding: 7.33rem 0;
+}
+
+.subscrible__iner {
+    max-width: 35.6rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* FORM */
+
+.form-label {
+    margin: 2.4rem 0;
+    display: block;
+    font-size: 1.6rem;
+    line-height: 1.416;
+    color: #848789;
+    font-style: italic;
+}
+
+.form-input {
+    width: 75%;
+    height: 69px;
+    padding: 0 1.7rem;
+    background-color: #ffffff;
+    border: 1px solid #d3d7d9;
+    border-right: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.33rem;
+    line-height: 1.2;
+    color: #333;
+}
+
+.form-input::placeholder {
+    font-size: 1.33rem;
+    line-height: 1.2;
+    color: #929292;
+    font-style: italic;
+}
+
+.form-input:focus {
+    outline: #64c29e;
+    border-color: #64c29e;
+}
+
+.form-btn {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 25%;
+    height: 69px;
+    padding: 1.7rem  3rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 0;
+    background: #64c29e;
+    cursor: pointer;
+    transition: background .2s linear;
+}
+
+.form-btn:hover,
+.form__btn:focus {
+    outline: #64c29e;
+    background: #4b9c7d;
 }
 
 /* MEDIA-QUERY */
@@ -678,6 +767,12 @@ li.slick-active button {
     .about {
         padding: 2rem 0;
     }
+
+    /* SUBSCRIBLE */
+
+    .subscrible {
+        padding: 3.33rem 0;
+    }
 }
 
 @media (max-width: 565px) {
@@ -698,9 +793,25 @@ li.slick-active button {
 
     /* SHOP */
 
+    .footer__shop {
+        padding: 3rem 0;
+    }
+
     .shop__btn {
         padding: 1.4rem  3rem;
-       
+    }
+
+    /* SUBSCRIBLE */
+
+    .form-input {
+        width: 100%;
+        border-right: 1px solid #d3d7d9;
+        border-bottom: 0;
+    }
+
+    .form-btn {
+        width: 100%;
+        justify-content: center;
     }
 
 }
