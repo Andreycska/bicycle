@@ -597,6 +597,101 @@ li.slick-active button {
     background: #4b9c7d;
 }
 
+/* FOOTER */
+
+.footer {
+    background-color: #f7f7f7;
+}
+
+.footer__iner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 7rem 0;
+}
+
+.footer__col {
+    flex: 0 1 33.333%;
+}
+
+.footer__title {
+    font-size: 1.06rem;
+    line-height: 1.1;
+    color: #848789;
+    font-weight: 700;
+}
+
+.footer__ref {
+    font-size: 1.06rem;
+    line-height: 1.1;
+    color: #848789;
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.footer__ref:hover,
+.footer__ref:focus {
+    text-decoration: underline;
+}
+
+.footer__address {
+    display: inline;
+    font-size: 1.06rem;
+    line-height: 1.1;
+    color: #848789;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.footer__mail {
+    font-size: 1.06rem;
+    line-height: 1.1;
+    color: #848789;
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.footer__mail:hover,
+.footer__mail:focus {
+    text-decoration: underline;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__social-link {
+    margin-right: 1rem;
+    text-decoration: none;
+    transition: transform .2s linear;
+}
+
+.footer__social-link:hover {
+    transform: translateY(-.33rem);
+}
+
+.footer__social-link:last-child {
+    margin-right: 0;
+}
+
+.footer__label {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer__text {
+    margin-right: 0.73rem;
+    font-size: 0.94rem;
+    line-height: 1.2;
+    color: #848789;
+    font-style: italic;
+}
+
 /* MEDIA-QUERY */
 
 @media (max-width: 1400px) {
@@ -666,6 +761,12 @@ li.slick-active button {
     .shop__col--big {
         flex: 0 1 50%;
     }
+
+    /* FOOTER */
+
+    .footer__iner {
+        padding: 3.33rem 0;
+    }
 }
 
 @media (max-width: 991px) {
@@ -680,6 +781,23 @@ li.slick-active button {
 
     .slider {
         padding: 4rem 0 4rem;
+    }
+
+    /* FOOTER */
+
+    .footer__col {
+        flex: 0 1 100%;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer__col:last-child {
+        margin-bottom: 0;
+    }
+
+    .footer__label {
+        justify-content: center;
     }
 
 }
@@ -772,6 +890,12 @@ li.slick-active button {
 
     .subscrible {
         padding: 3.33rem 0;
+    }
+
+    /* FOOTER */
+
+    .footer__iner {
+        padding: 1rem 0;
     }
 }
 
