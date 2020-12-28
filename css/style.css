@@ -263,44 +263,57 @@ p {
     background-color: #d6d7d7;
 }
 
-/* WORK */
+/* CARD */
 
-.work__iner {
+.card {
     display: flex;
     flex-wrap: wrap;
 }
 
-.work__col {
+.card__col {
     flex: 0 1 33.333%;
 }
 
-.work__col--second {
+.card__col--second {
     order: 1;
 }
 
-.work__col--big {
+.card__col--big {
     flex: 0 1 66.667%;
 }
 
-.work__col--big--second {
+.card__col--big--second {
     order: 2;
 }
 
-.work__photo {
+.card__photo {
     display: block;
     height: 100%;
     position: relative;
 }
 
-.work__photo:hover .work__logo {
+.card__photo--big {
+    padding-bottom: 200.5%;
+}
+
+.card__photo--st {
+    height: auto;
+    padding-bottom: 50%;
+}
+
+.card__photo--litle {
+    padding-bottom: 100%;
+}
+
+.card__photo:hover .card__logo {
     opacity: 1;
 }
 
-.work__photo:focus .work__logo {
+.card__photo:focus .card__logo {
     opacity: 1;
 }
 
-.work__photo-mini {
+.card__photo-mini {
     display: block;
     width: 100%;
     /* background: url("../img/work/Layer\ 11.png") center no-repeat;
@@ -308,12 +321,12 @@ p {
     padding: 0 0 37.7% 0; */
 }
 
-.work__photo-mini--second {
+.card__photo-mini--second {
     background: url("../img/work/Layer\ 13.png") center no-repeat;
     background-size: cover;
 }
 
-.work__img {
+.card__img {
     width: 100%;
     height: 100%;
     /* background: url("../img/work/Layer\ 10.png") center no-repeat;
@@ -324,16 +337,12 @@ p {
     z-index: 1;
 }
 
-.work__img--second {
-    background: url("../img/work/Layer\ 12.png") center no-repeat;
-    background-size: cover;
-}
-
-.work__logo {
+.card__logo {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-color: rgba(100,194,158,0.5);
     position: absolute;
@@ -344,12 +353,21 @@ p {
     transition: opacity .2s linear;
 }
 
-.work__content {
+.card__text {
+    margin-top: 0.7rem;
+    font-size: 0.94rem;
+    letter-spacing: 3px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card__content {
     padding: 4.6667rem 4.3333rem 3.6667rem;
     position: relative;
 }
 
-.work__content::after {
+.card__content::after {
     content: "";
     width: 0;
     height: 0;
@@ -441,6 +459,55 @@ li.slick-active button {
     background-color: #a9afb3;
 }
 
+/* SHOP */
+
+.body__shop {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shop__col {
+    flex: 0 1 16.666%;
+}
+
+.shop__col--big {
+    flex: 0 1 33.333%;
+}
+
+.shop-body {
+    height: 100%;
+}
+
+.shop-body__row {
+    display: flex;
+}
+
+.shop-body__col {
+    flex: 0 1 50%;
+}
+
+.footer__shop {
+    padding: 5rem 0;
+    background-color: #282f35;
+    text-align: center;
+}
+
+.shop__btn {
+    display: inline-block;
+    margin: 0;
+    padding: 1.4rem  4rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.94rem;
+    letter-spacing: 3px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,0.5);
+    background: transparent;
+    cursor: pointer;
+}
+
 /* MEDIA-QUERY */
 
 @media (max-width: 1400px) {
@@ -451,9 +518,9 @@ li.slick-active button {
         margin: 1rem auto 0;
     }
 
-    /* WORK */
+    /* CARD */
 
-    .work__content {
+    .card__content {
         padding: 2.6667rem 2.33rem 2rem;
     }
 
@@ -461,27 +528,54 @@ li.slick-active button {
 
 @media (max-width: 1100px) {
 
-    /* WORK */
+    /* CARD */
 
-    .work__col {
+    .card__col {
         flex: 100%;
     }
 
-    .work__col--big {
+    .card__col--big {
         flex: 100%;
     }
 
-    .work__col--second {
+    .card__col--second {
         order: 2;
     }
     
-    .work__col--big--second {
+    .card__col--big--second {
         order: 1;
     }
     
-    .work__photo {
+    .card__photo {
         height: 100%;
         padding-bottom: 70%;
+    }
+
+    .card__photo--st {
+        height: auto;
+        padding-bottom: 50%;
+    }
+
+    .card__photo--big {
+        padding-bottom: 200.5%;
+    }
+
+    /* SHOP */
+
+    .shop__col {
+        flex: 0 1 50%;
+    }
+
+    .shop__col:first-child {
+        flex: 0 1 100%;
+    }
+
+    .shop__col:last-child {
+        flex: 0 1 100%;
+    }
+    
+    .shop__col--big {
+        flex: 0 1 50%;
     }
 }
 
@@ -600,6 +694,13 @@ li.slick-active button {
 
     .slider__content {
         font-size: 1.06rem;
+    }
+
+    /* SHOP */
+
+    .shop__btn {
+        padding: 1.4rem  3rem;
+       
     }
 
 }
