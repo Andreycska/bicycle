@@ -67,9 +67,9 @@ p {
     width: 100%;
     position: fixed;
     background-color: #fff;
+    padding: 0.8rem 0;
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
     z-index: 1000;
-    padding: 0.8rem 0;
     top: 0;
 }
 
@@ -84,6 +84,7 @@ p {
 
 .header__logo {
     display: block;
+    cursor: pointer;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -810,8 +811,16 @@ li.slick-active button {
         top: 1.5rem;
     }
 
+    .header.fixed {
+        padding: 0;
+    }
+
     .header__iner {
         justify-content: flex-end;
+    }
+
+    .header__logo {
+        height: 55px;
     }
     
     /* nav */
@@ -822,6 +831,8 @@ li.slick-active button {
         height: 100%;
         background-color: #4d4959;
         flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
         position: fixed;
         top: 0;
         left: 0;

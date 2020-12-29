@@ -60,6 +60,18 @@ $(function(){
         }, 700); // едим с какой скоростью
     });
 
+    // HOME SMOOTH SCROLL
+
+    $("[data-home]").on("click", function(event) {
+        event.preventDefault();
+        let blockId = $(this).data("home");
+        let blockOffset = $(blockId).offset().top;
+
+        $("html, body").animate({
+            scrollTop: blockOffset
+        }, 700)
+    });
+
     // SLIDER: https://kenwheeler.github.io/slick/
 
     $('.slider__iner').slick({
